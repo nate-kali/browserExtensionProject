@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "whiteListBrowserX10sion",
+    "description": "Only make requests to a fixed set of domains.",
+    "version": "1.0.0",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "activeTab",
+        "tabs"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "path": "rules.json",
+                "enabled": true
+            }
+        ]
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "fixed_whitelist.txt"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+"action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+        "128": "icons/icon_safe_128.png",
+        "256": "icons/icon_safe_256.png",
+        "512": "icons/icon_safe_512.png"
+    }
+},
+"icons": {
+    "128": "icons/icon_safe_128.png",
+    "256": "icons/icon_safe_256.png",
+    "512": "icons/icon_safe_512.png"
+}
+
+    }

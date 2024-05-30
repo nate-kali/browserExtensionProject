@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <span class="toggle-text">Unrestricted Browsing</span>
+        <div id="sliderContainer">
+            <!-- The slider will be inserted here dynamically -->
+        </div>
+        <span class="toggle-text">Safe Browsing</span>
+    </div>
+
+<div id="container">
+  <div id="info-bar">
+   whiteListBrowserX10sion
+   <div id="info-bar-subtitle">Last update: <span id="last-updated-date"></span></div> 
+</div>
+
+
+        <div class="action-button-container">
+            <button id="addCurrentDomainButton" class="action-button">Whitelist current domain</button>
+            <button id="bulkWhitelistButton" class="action-button">Bulk whitelist (.txt)</button>
+            <input type="file" id="bulkUpload" accept=".txt" style="display: none;" placeholder="input a .txt file" /> <!-- Hidden file input -->
+        </div>
+                <div style="position: relative; display: flex; align-items: center;">
+
+            <input type="text" id="site" placeholder="Add custom site to whitelist..." autofocus />
+            <button id="addButton" class="material-icons">arrow_forward</button>
+        </div>
+ <div id="whitelist"></div>
+<a id="exportLink" href="#" style="display:none;">Export list as .txt</a>
+
+    </div>
+<div id="footer">
+    Version <span id="version-number"></span>.
+</div>
+<div id="custom-alert" class="custom-alert">
+  <div class="custom-alert-content">
+    <span class="custom-alert-message"></span>
+    <button class="custom-alert-close">OK</button>
+  </div>
+</div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
